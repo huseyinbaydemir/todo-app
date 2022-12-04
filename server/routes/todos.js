@@ -3,8 +3,6 @@ var express = require('express');
 var router = express.Router();
 var Todo = require("../models/Todo.js");
 
-
-
 // Get all todos
 router.get('/', (req, res) => {
     const promise = Todo.find({});

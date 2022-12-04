@@ -1,10 +1,15 @@
 const express = require('express')
-const app = express()
-const db = require('./helper/db.js')();
 const todosRouter = require('./routes/todos.js');
-const PORT = 3000;
-
+const cors = require('cors'); 
+const db = require('./helper/db.js')();
 const bp = require('body-parser')
+
+// Create express app
+const app = express()
+const PORT = 5000;
+// cors middleware to prevent cors errors
+app.use(cors());
+
 app.use(bp.json())
 app.use(bp.urlencoded({ extended: true }))
 
