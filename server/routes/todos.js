@@ -53,7 +53,8 @@ router.put('/:todo_id', (req, res) => {
 
 // Delete a todo
 router.delete('/:todo_id', (req, res) => {
-    const promise = Todo.findByIdAndRemove(req.params.todo_id);
+    
+    const promise = Todo.deleteOne({ todoId: req.params.todo_id });
 
     promise.then((data) => {
         res.json(data);
