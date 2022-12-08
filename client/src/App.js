@@ -27,6 +27,7 @@ function App() {
   const markTodo = index => {
     const newTodos = [...todos];
     newTodos[index].isDone = true;
+    axios.put('http://localhost:5000/todos/' + newTodos[index].todoId)
     setTodos(newTodos);
   };
 

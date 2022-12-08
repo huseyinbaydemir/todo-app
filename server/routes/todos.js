@@ -40,10 +40,7 @@ router.post('/', (req, res) => {
 
 // Update a todo
 router.put('/:todo_id', (req, res) => {
-    const promise = Todo.findByIdAndUpdate(
-        req.params.todo_id,
-        req.body);
-
+    const promise = Todo.updateOne({ todoId: req.params.todo_id }, { isDone: true});
     promise.then((data) => {
         res.json(data);
     }).catch((err) => {
