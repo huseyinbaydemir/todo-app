@@ -12,8 +12,6 @@ import Todo from "./components/Todo";
 function App() {
   const [todos, setTodos] = useState([]);
 
-
-
   const addTodo = text => {
     let params = {
       todoId : new Date().getTime(),
@@ -44,7 +42,6 @@ function App() {
     .then(res => {
       setTodos(res.data);
     })
-    console.log("todos");
   }, []);
 
   return (
