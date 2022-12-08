@@ -1,8 +1,3 @@
-
-// var express = require('express');
-// var router = express.Router();
-// var Todo = require("../models/Todo.js");
-
 import express from 'express';
 import Todo from '../models/Todo.js';
 const router = express.Router();

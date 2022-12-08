@@ -1,9 +1,3 @@
-// const express = require('express')
-// const todosRouter = require('./routes/todos.js');
-// const cors = require('cors'); 
-// const db = require('./helper/db.js')();
-// const bp = require('body-parser')
-
 import express from 'express'
 import todosRouter from './routes/todos.js';
 import cors from 'cors';

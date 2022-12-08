@@ -7,7 +7,6 @@ import FormTodo from "./components/FormTodo";
 import Todo from "./components/Todo";
 
 
-
 function App() {
   const [todos, setTodos] = useState([]);
 
