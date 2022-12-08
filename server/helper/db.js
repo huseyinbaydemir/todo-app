@@ -1,6 +1,6 @@
-var mongoose = require("mongoose");
+import mongoose from 'mongoose';
 
-module.exports = () => {
+export default () => {
     mongoose.connect("mongodb://127.0.0.1:27017/todoapp", { useNewUrlParser: true, useUnifiedTopology: true });
 
     mongoose.connection.on('open', () => {

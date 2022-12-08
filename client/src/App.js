@@ -3,7 +3,6 @@ import "./App.css";
 import {Card} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
-
 import FormTodo from "./components/FormTodo";
 import Todo from "./components/Todo";
 
@@ -52,10 +51,9 @@ function App() {
         <FormTodo addTodo={addTodo} />
         <div>
           {todos.map((todo, index) => (
-            <Card>
+            <Card key={index.toString()}>
               <Card.Body>
                 <Todo
-                key={index}
                 index={index}
                 todo={todo}
                 markTodo={markTodo}

@@ -1,12 +1,22 @@
-const express = require('express')
-const todosRouter = require('./routes/todos.js');
-const cors = require('cors'); 
-const db = require('./helper/db.js')();
-const bp = require('body-parser')
+// const express = require('express')
+// const todosRouter = require('./routes/todos.js');
+// const cors = require('cors'); 
+// const db = require('./helper/db.js')();
+// const bp = require('body-parser')
+
+import express from 'express'
+import todosRouter from './routes/todos.js';
+import cors from 'cors';
+import bp from 'body-parser';
+import db from './helper/db.js';
+
+// Connect to database initially
+db();
 
 // Create express app
 const app = express()
 const PORT = 5000;
+
 // cors middleware to prevent cors errors
 app.use(cors());
 
